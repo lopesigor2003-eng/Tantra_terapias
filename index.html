@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tantra Terapias | Espaço Terapêutico em Lisboa</title>
+    <!-- SEO -->
+    <meta name="description" content="Espaço terapêutico especializado em Tantra e terapias sensoriais em Lisboa. Ambiente sofisticado, acolhedor e transformador.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Libraries -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-black': '#050505',
+                        'card-bg': '#111111',
+                        'blood-red': '#6e0d14',
+                        'accent-red': '#8b0000',
+                        'purple-deep': '#3e1f47',
+                        'warm-white': '#ffffff',
+                        'text-muted': '#a0a0a0',
+                    },
+                    fontFamily: {
+                        'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                        'serif': ['Georgia', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(5,5,5,1)), url('https://lh3.googleusercontent.com/p/AF1QipNx1sGz8-qUzb4x77-OpClhLIuizXNGa30yMMuz=w1080-h608-p-no-v0');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+        .logo-text {
+            background: linear-gradient(to right, #ffffff, #8b0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-sleek {
+            background: linear-gradient(45deg, #8b0000, #3e1f47);
+            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        .btn-sleek:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(139, 0, 0, 0.4);
+        }
+        .luxury-border {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery-img {
+            transition: transform 0.5s ease;
+            filter: grayscale(0.5);
+        }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
+            filter: grayscale(0);
+        }
+        .text-accent {
+            color: #8b0000;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-deep-black/80 backdrop-blur-md border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center text-warm-white">
+            <div class="text-2xl font-serif tracking-tight logo-text font-bold">
+                Tantra Terapias
+            </div>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-[11px] uppercase tracking-[0.2em] font-bold text-text-muted">
+                <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+                <a href="#terapias" class="hover:text-white transition-colors">Terapias</a>
+                <a href="#diferenciais" class="hover:text-white transition-colors">Diferenciais</a>
+                <a href="#galeria" class="hover:text-white transition-colors">Galeria</a>
+                <a href="#localizacao" class="hover:text-white transition-colors">Contacto</a>
+            </div>
+
+            <a href="https://wa.me/351935009752" target="_blank" class="hidden md:block btn-sleek px-6 py-2 rounded-full text-[10px] uppercase tracking-widest font-bold text-white">
+                Agendar Sessão
+            </a>
+
+            <!-- Mobile Burger -->
+            <button class="md:hidden" id="menuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden absolute top-full left-0 w-full bg-deep-black border-b border-white/10 p-6 flex flex-col space-y-4 md:hidden">
+            <a href="#sobre" class="text-lg font-serif">Sobre</a>
+            <a href="#terapias" class="text-lg font-serif">Terapias</a>
+            <a href="#galeria" class="text-lg font-serif">Galeria</a>
+            <a href="#localizacao" class="text-lg font-serif">Contacto</a>
+            <a href="https://wa.me/351935009752" target="_blank" class="bg-accent-red text-center py-3 rounded-md font-bold uppercase tracking-widest text-[10px]">Agendar Agora</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-t from-deep-black via-transparent to-transparent"></div>
+        <div class="z-10 text-center px-6" data-aos="fade-up" data-aos-duration="1200">
+            <div class="flex items-center justify-center gap-1 mb-4 text-accent-red opacity-90">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <span class="text-[10px] text-white/60 ml-2 uppercase tracking-[0.2em] font-bold">Avaliação 5 Estrelas</span>
+            </div>
+            <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight max-w-4xl mx-auto">
+                Reconecte-se com a sua <span class="text-accent-red italic">Essência</span>
+            </h1>
+            <p class="text-lg md:text-xl font-light text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
+                Um santuário de paz no coração de Lisboa. Experiências sensoriais e terapêuticas profundas num ambiente de total privacidade e acolhimento.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/351935009752" target="_blank" class="btn-sleek text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2">
+                    Iniciar Jornada <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+                <a href="#terapias" class="border border-white/10 text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] hover:bg-white/5 transition-all">
+                    Ver Terapias
+                </a>
+            </div>
+        </div>
+        
+        <!-- Decoration -->
+        <div class="absolute bottom-10 left-10 hidden xl:block opacity-40">
+            <div class="text-[10px] uppercase tracking-[0.5em] vertical-text flex items-center gap-4">
+                <span>R. Oliveira Martins 29A, Lisboa</span>
+                <div class="w-[1px] h-20 bg-warm-white/30 ml-[2px]"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Section -->
+    <section id="sobre" class="py-24 px-6 md:py-32 bg-deep-black">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="relative" data-aos="fade-right">
+                <div class="aspect-[4/5] rounded-[2rem] overflow-hidden luxury-border">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNj8rwMe-96X7Er9ztqSRlFbTGcKuZu7tMLVAFS=s1360-w1360-h1020" alt="Espaço Tantra Terapias" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-spiritual-purple p-8 rounded-2xl hidden md:block max-w-[200px]">
+                    <p class="text-3xl font-serif mb-1">100%</p>
+                    <p class="text-[10px] uppercase tracking-widest opacity-80 leading-relaxed font-bold">Privacidade e Atendimento Personalizado</p>
+                </div>
+            </div>
+            <div data-aos="fade-left" data-aos-delay="200">
+                <span class="text-accent-red text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">O Nosso Espaço</span>
+                <h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">Um Ambiente de Calma e Transmutação</h2>
+                <p class="text-text-muted leading-relaxed mb-6 font-light">
+                    O Tantra Terapias é mais do que um espaço de massagem; é um santuário preparado para proporcionar experiências profundas e transformadoras. Situado no coração de Lisboa, o nosso ambiente foi desenhado nos mínimos detalhes para acolher cada ser de forma única.
+                </p>
+                <div class="flex gap-4 mb-8">
+                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-[11px] font-bold uppercase tracking-widest">LGBTQ+ Friendly</span>
+                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-[11px] font-bold uppercase tracking-widest">Atendimento Privado</span>
+                </div>
+                <ul class="space-y-4 mb-10">
+                    <li class="flex items-center gap-4 text-sm font-medium opacity-90 italic">
+                        <div class="w-1.5 h-1.5 bg-accent-red rounded-full"></div>
+                        Ambiente acolhedor e totalmente privado
+                    </li>
+                    <li class="flex items-center gap-4 text-sm font-medium opacity-90 italic">
+                        <div class="w-1.5 h-1.5 bg-accent-red rounded-full"></div>
+                        Profissional qualificada e dedicada
+                    </li>
+                </ul>
+                <a href="#terapias" class="text-warm-white border-b border-spiritual-purple pb-2 hover:border-warm-white transition-all text-xs uppercase tracking-widest font-bold">
+                    Descubra as nossas terapias
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terapias Section -->
+    <section id="terapias" class="py-24 bg-deep-black px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="text-accent-red text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">Serviços Terapêuticos</span>
+                <h2 class="text-4xl md:text-6xl font-serif mb-6">Experiência Sensorial</h2>
+                <div class="w-20 h-1 bg-accent-red mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Terapia Tântrica -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="lotus" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Terapia Tântrica</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Um caminho de expansão da consciência corporal e despertar energético através do toque sagrado e consciente.
+                    </p>
+                </div>
+
+                <!-- Terapia Sensorial -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="feather" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Terapia Sensorial</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Exploração profunda dos sentidos para reduzir o stress, promover o relaxamento e reconectar com o prazer de sentir.
+                    </p>
+                </div>
+
+                <!-- Desenvolvimento Pessoal -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="user" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Desenvolvimento Pessoal</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Processos terapêuticos desenhados para o seu crescimento interior, superação de bloqueios e expansão emocional.
+                    </p>
+                </div>
+
+                <!-- Para Casais -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="heart" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Terapias para Casais</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Técnicas de conexão profunda para fortalecer a intimidade, comunicação e o vínculo afetivo entre o casal.
+                    </p>
+                </div>
+
+                <!-- Relaxamento -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="sun" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Relaxamento Terapêutico</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Pausas necessárias para o corpo e mente recuperarem o equilíbrio num mundo em constante movimento.
+                    </p>
+                </div>
+
+                <!-- Conexão Emocional -->
+                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="waves" class="w-8 h-8"></i>
+                    </div>
+                    <h3 class="text-2xl font-serif mb-4">Conexão Emocional</h3>
+                    <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
+                        Um trabalho de escuta e toque focado na resolução de tensões acumuladas e na libertação emocional.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <a href="https://wa.me/351935009752" target="_blank" class="btn-sleek px-12 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] inline-flex items-center gap-3 text-white">
+                    Marcar Consulta <i data-lucide="message-circle" class="w-4 h-4"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria Section -->
+    <section id="galeria" class="py-24 bg-deep-black px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div>
+                    <span class="text-spiritual-purple text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Visual Experience</span>
+                    <h2 class="text-4xl md:text-6xl font-serif">A Essência do Lugar</h2>
+                </div>
+                <div class="text-warm-white/50 text-sm font-light max-w-xs md:text-right">
+                    Explore detalhes do nosso ambiente pensado para a sua paz interior.
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+                <div class="gallery-item cursor-pointer h-[300px] md:h-[500px] overflow-hidden rounded-3xl luxury-border" data-aos="zoom-in">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipPKsmXRwVTbSF9RTi4sYeyrnkjPf716sfISeB0V=s1360-w1360-h1020" alt="Galeria 1" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="gallery-item cursor-pointer h-[250px] md:h-[400px] overflow-hidden rounded-3xl mt-0 md:mt-12 luxury-border" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOJzwnTyX4SBUJYFpKQirkr7Xrh8zdDLI6idzie=s1360-w1360-h1020" alt="Galeria 2" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="gallery-item cursor-pointer h-[300px] md:h-[500px] overflow-hidden rounded-3xl luxury-border" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipOmmluje1ZNlkfFG0sqlOcOVM_XvN8kJ9z4mRJt=s1360-w1360-h1020" alt="Galeria 3" class="w-full h-full object-cover gallery-img">
+                </div>
+                <div class="gallery-item cursor-pointer h-[250px] md:h-[400px] overflow-hidden rounded-3xl mt-0 md:mt-12 luxury-border" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipNx1sGz8-qUzb4x77-OpClhLIuizXNGa30yMMuz=s1360-w1360-h1020" alt="Galeria 4" class="w-full h-full object-cover gallery-img">
+                </div>
+            </div>
+            
+            <!-- Video Section -->
+            <div class="mt-24 relative aspect-video rounded-3xl overflow-hidden shadow-2xl luxury-border" data-aos="fade-up">
+                <video 
+                    class="w-full h-full object-cover"
+                    controls
+                    loop 
+                    playsinline
+                    poster="https://lh3.googleusercontent.com/p/AF1QipPKsmXRwVTbSF9RTi4sYeyrnkjPf716sfISeB0V=s1360-w1360-h1020"
+                >
+                    <source src="https://lh3.googleusercontent.com/gcs/AFyKPRBUcF57shBTtzlZFc9RoeznM2CVjUJSy2-dmaxIHPRts0UVbmQjakwTN0zlD6T2M08aQx1x_f8yV2-tRq40rj1z5jtD-bYytYL2hz86xazHjAuGKRDTypCPtH54J0ZL7AGESpu8tmcXBsedxqbm0Vj6kFYtYn3EJdwXkGTelOEcZO6iXbOnNKmgYpdeqjPXeb9E=m18?cpn=4vpt-FfY_6JuOMKs" type="video/mp4">
+                    O seu navegador não suporta a reprodução de vídeos.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section class="py-24 bg-zinc-950 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-serif mb-6">Testemunhos</h2>
+                <div class="w-12 h-0.5 bg-accent-red mx-auto mb-1 flex justify-center"></div>
+                <div class="w-6 h-0.5 bg-accent-red opacity-50 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testemunho 1 -->
+                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLJO4IqIIp2nfOlKIxZiCrsnC6-WlwbmDTIDhPrYQJeSW2jDg=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <div>
+                            <p class="font-serif text-lg">Davi Santana</p>
+                            <div class="flex text-accent-red">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                        "O espaço é impecável. Pensado nos mínimos detalhes, transmuta-se num santuário de paz assim que atravessamos a porta..."
+                    </p>
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
+                </div>
+
+                <!-- Testemunho 2 -->
+                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXrwElxNeCXbG7QEj8V6PrP_92nrRGVVNk97VObOscGlDiBue_uOQ=w32-h32-p-rp-mo-ba3-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <div>
+                            <p class="font-serif text-lg leading-tight">Roberto Cássio</p>
+                            <div class="flex text-accent-red">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                        "Muito bom! O processo terapêutico oferecido permite um aprofundamento em si mesmo..."
+                    </p>
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
+                </div>
+
+                <!-- Testemunho 3 -->
+                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXVNUeeOPFzPF5U854H-eogS9OoDmlCP2K5xvAEzT47_YpLslM=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <div>
+                            <p class="font-serif text-lg">Ken Brandsø</p>
+                            <div class="flex text-accent-red">
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                                <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                        "Tive uma sessão inicial e achei-a muito impactante e encorajadora..."
+                    </p>
+                    <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização e Contacto -->
+    <section id="localizacao" class="py-24 bg-deep-black px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Info -->
+                <div data-aos="fade-right">
+                    <h2 class="text-4xl md:text-5xl font-serif mb-12">Onde nos Encontrar</h2>
+                    <div class="space-y-10">
+                        <div class="flex items-start gap-6">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Morada</p>
+                                <p class="text-lg font-serif">R. Oliveira Martins 29A</p>
+                                <p class="text-text-muted font-light">1000-211 Lisboa, Portugal</p>
+                                <p class="text-[10px] uppercase tracking-widest mt-2 text-accent-red font-bold">Estacionamento pago na rua</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                                <i data-lucide="clock"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Horários</p>
+                                <div class="grid grid-cols-2 gap-4 text-white/80">
+                                    <div>
+                                        <p class="text-xs opacity-60">Segunda a Sexta</p>
+                                        <p class="text-lg font-serif">11:00 - 20:00</p>
+                                    </div>
+                                    <div>
+                                        <p class="text-xs opacity-60">Sábado</p>
+                                        <p class="text-lg font-serif">10:00 - 18:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Contacto Direto</p>
+                                <p class="text-xl font-serif mb-1">+351 935 009 752</p>
+                                <div class="flex gap-4 mt-2">
+                                    <a href="https://www.instagram.com/tantrasarah_lisboa/" target="_blank" class="text-white/40 hover:text-white transition-colors">
+                                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                                    </a>
+                                    <a href="https://wa.me/351935009752" target="_blank" class="text-white/40 hover:text-white transition-colors">
+                                        <i data-lucide="message-square" class="w-5 h-5"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div class="h-[500px] rounded-3xl overflow-hidden luxury-border shadow-2xl" data-aos="fade-left">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.551821876527!2d-9.14144365!3d38.7410057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933758364f9f7%3A0xc0c87498302066d7!2sR.%20Oliveira%20Martins%2029A%2C%201000-211%20Lisboa!5e0!3m2!1spt-PT!2spt!4v1713791234567!5m2!1spt-PT!2spt" 
+                        width="100%" height="100%" style="border:0; filter: invert(90%) hue-rotate(180deg) brightness(0.6);" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="py-24 bg-gradient-to-b from-deep-black to-card-bg px-6 text-center border-t border-white/5">
+        <div class="max-w-3xl mx-auto" data-aos="fade-up">
+            <h2 class="text-4xl md:text-6xl font-serif mb-8 italic">Pronta(o) para reconectar?</h2>
+            <p class="text-text-muted mb-12 font-light text-lg">Permita-se viver uma experiência única que transcende o físico. O seu bem-estar é o nosso propósito.</p>
+            <a href="https://wa.me/351935009752" target="_blank" class="inline-flex items-center gap-4 btn-sleek text-white px-12 py-6 rounded-full font-bold uppercase tracking-widest text-[11px] hover:scale-105 transition-all">
+                Reservar a Minha Sessão <i data-lucide="calendar"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-deep-black px-6 border-t border-warm-white/5 text-center">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 opacity-40">
+            <p class="text-[10px] uppercase tracking-widest">© 2024 Tantra Terapias | Lisboa. Todos os direitos reservados.</p>
+            <div class="flex gap-8 text-[10px] uppercase tracking-[0.2em] font-medium">
+                <a href="#" class="hover:text-spiritual-purple transition-colors">Privacidade</a>
+                <a href="#" class="hover:text-spiritual-purple transition-colors">Termos</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating -->
+    <a href="https://wa.me/351935009752" target="_blank" class="whatsapp-float bg-green-600 p-4 rounded-full shadow-2xl text-white flex items-center justify-center">
+        <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+        <span class="absolute -top-2 -right-2 bg-red-600 text-[8px] font-bold px-2 py-1 rounded-full animate-pulse uppercase">Online</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        // Initialize Libraries
+        lucide.createIcons();
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 50
+        });
+
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let menuOpen = false;
+
+        menuBtn.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+                mobileMenu.classList.remove('hidden');
+                menuBtn.innerHTML = '<i data-lucide="x"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i data-lucide="menu"></i>';
+            }
+            lucide.createIcons();
+        });
+
+        // Simple smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Close mobile menu if open
+                if (menuOpen) {
+                    mobileMenu.classList.add('hidden');
+                    menuBtn.innerHTML = '<i data-lucide="menu"></i>';
+                    menuOpen = false;
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
