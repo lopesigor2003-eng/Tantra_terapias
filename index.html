@@ -22,11 +22,11 @@
             theme: {
                 extend: {
                     colors: {
-                        'deep-black': '#050505',
-                        'card-bg': '#111111',
-                        'blood-red': '#6e0d14',
-                        'accent-red': '#8b0000',
-                        'purple-deep': '#3e1f47',
+                        'deep-black': '#0a0a0a',
+                        'card-bg': '#141414',
+                        'gold-primary': '#c5a358',
+                        'gold-accent': '#d4af37',
+                        'gold-deep': '#8b733a',
                         'warm-white': '#ffffff',
                         'text-muted': '#a0a0a0',
                     },
@@ -41,44 +41,44 @@
 
     <style>
         body {
-            background-color: #050505;
+            background-color: #0a0a0a;
             color: #ffffff;
         }
         .hero-gradient {
-            background: linear-gradient(to bottom, rgba(5,5,5,0.6), rgba(5,5,5,1)), url('https://lh3.googleusercontent.com/p/AF1QipNx1sGz8-qUzb4x77-OpClhLIuizXNGa30yMMuz=w1080-h608-p-no-v0');
+            background: linear-gradient(to bottom, rgba(10,10,10,0.5), rgba(10,10,10,0.9)), url('https://i.postimg.cc/4dyMjynn/1f544d5a-5879-403f-a313-78a420a6d2de.jpg');
             background-size: cover;
             background-position: center;
         }
         .glass {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(197, 163, 88, 0.05); /* Subtle gold tint */
+            border: 1px solid rgba(197, 163, 88, 0.15);
             border-radius: 20px;
             backdrop-filter: blur(10px);
         }
         .logo-text {
-            background: linear-gradient(to right, #ffffff, #8b0000);
+            background: linear-gradient(to right, #ffffff, #c5a358);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .btn-sleek {
-            background: linear-gradient(45deg, #8b0000, #3e1f47);
-            box-shadow: 0 10px 30px rgba(139, 0, 0, 0.3);
+            background: linear-gradient(45deg, #c5a358, #8b733a);
+            box-shadow: 0 10px 30px rgba(197, 163, 88, 0.2);
             transition: all 0.3s ease;
         }
         .btn-sleek:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(139, 0, 0, 0.4);
+            box-shadow: 0 15px 35px rgba(197, 163, 88, 0.3);
         }
         .luxury-border {
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(197, 163, 88, 0.15);
         }
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
             right: 30px;
             z-index: 100;
-            background: linear-gradient(45deg, #25D366, #128C7E);
-            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+            background: linear-gradient(45deg, #c5a358, #8b733a);
+            box-shadow: 0 10px 20px rgba(197, 163, 88, 0.2);
             transition: transform 0.3s ease;
         }
         .gallery-img {
@@ -90,7 +90,7 @@
             filter: grayscale(0);
         }
         .text-accent {
-            color: #8b0000;
+            color: #c5a358;
         }
     </style>
 </head>
@@ -136,7 +136,7 @@
     <section class="h-screen flex items-center justify-center hero-gradient relative overflow-hidden">
         <div class="absolute inset-0 bg-gradient-to-t from-deep-black via-transparent to-transparent"></div>
         <div class="z-10 text-center px-6" data-aos="fade-up" data-aos-duration="1200">
-            <div class="flex items-center justify-center gap-1 mb-4 text-accent-red opacity-90">
+            <div class="flex items-center justify-center gap-1 mb-4 text-gold-accent opacity-90">
                 <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 <i data-lucide="star" class="w-4 h-4 fill-current"></i>
                 <i data-lucide="star" class="w-4 h-4 fill-current"></i>
@@ -145,10 +145,10 @@
                 <span class="text-[10px] text-white/60 ml-2 uppercase tracking-[0.2em] font-bold">Avaliação 5 Estrelas</span>
             </div>
             <h1 class="text-5xl md:text-8xl font-serif mb-6 leading-tight max-w-4xl mx-auto">
-                Reconecte-se com a sua <span class="text-accent-red italic">Essência</span>
+                Reconecte-se com o seu <span class="text-gold-accent italic">Equilíbrio</span>
             </h1>
             <p class="text-lg md:text-xl font-light text-text-muted max-w-2xl mx-auto mb-10 leading-relaxed">
-                Um santuário de paz no coração de Lisboa. Experiências sensoriais e terapêuticas profundas num ambiente de total privacidade e acolhimento.
+                Um santuário de paz no coração de Lisboa. Experiências terapêuticas focadas na saúde emocional e bem-estar profundo num ambiente de total privacidade.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://wa.me/351935009752" target="_blank" class="btn-sleek text-white px-10 py-5 rounded-full font-bold uppercase tracking-widest text-[11px] flex items-center justify-center gap-2">
@@ -182,26 +182,26 @@
                 </div>
             </div>
             <div data-aos="fade-left" data-aos-delay="200">
-                <span class="text-accent-red text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">O Nosso Espaço</span>
+                <span class="text-gold-primary text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">O Nosso Espaço</span>
                 <h2 class="text-4xl md:text-5xl font-serif mb-8 leading-tight">Um Ambiente de Calma e Transmutação</h2>
                 <p class="text-text-muted leading-relaxed mb-6 font-light">
                     O Tantra Terapias é mais do que um espaço de massagem; é um santuário preparado para proporcionar experiências profundas e transformadoras. Situado no coração de Lisboa, o nosso ambiente foi desenhado nos mínimos detalhes para acolher cada ser de forma única.
                 </p>
                 <div class="flex gap-4 mb-8">
-                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-[11px] font-bold uppercase tracking-widest">LGBTQ+ Friendly</span>
-                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-white/10 text-[11px] font-bold uppercase tracking-widest">Atendimento Privado</span>
+                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-gold-primary/20 text-[11px] font-bold uppercase tracking-widest text-gold-accent">LGBTQ+ Friendly</span>
+                    <span class="bg-white/5 px-4 py-2 rounded-lg border border-gold-primary/20 text-[11px] font-bold uppercase tracking-widest text-gold-accent">Atendimento Privado</span>
                 </div>
                 <ul class="space-y-4 mb-10">
                     <li class="flex items-center gap-4 text-sm font-medium opacity-90 italic">
-                        <div class="w-1.5 h-1.5 bg-accent-red rounded-full"></div>
+                        <div class="w-1.5 h-1.5 bg-gold-accent rounded-full"></div>
                         Ambiente acolhedor e totalmente privado
                     </li>
                     <li class="flex items-center gap-4 text-sm font-medium opacity-90 italic">
-                        <div class="w-1.5 h-1.5 bg-accent-red rounded-full"></div>
+                        <div class="w-1.5 h-1.5 bg-gold-accent rounded-full"></div>
                         Profissional qualificada e dedicada
                     </li>
                 </ul>
-                <a href="#terapias" class="text-warm-white border-b border-spiritual-purple pb-2 hover:border-warm-white transition-all text-xs uppercase tracking-widest font-bold">
+                <a href="#terapias" class="text-white border-b border-gold-accent pb-2 hover:border-gold-primary transition-all text-xs uppercase tracking-widest font-bold">
                     Descubra as nossas terapias
                 </a>
             </div>
@@ -212,37 +212,37 @@
     <section id="terapias" class="py-24 bg-deep-black px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
-                <span class="text-accent-red text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">Serviços Terapêuticos</span>
-                <h2 class="text-4xl md:text-6xl font-serif mb-6">Experiência Sensorial</h2>
-                <div class="w-20 h-1 bg-accent-red mx-auto"></div>
+                <span class="text-gold-primary text-[11px] font-bold uppercase tracking-[0.3em] mb-4 block">Serviços Terapêuticos</span>
+                <h2 class="text-4xl md:text-6xl font-serif mb-6 text-gold-accent">Experiência Terapêutica</h2>
+                <div class="w-20 h-1 bg-gold-primary mx-auto"></div>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Terapia Tântrica -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="0">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="0">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
                         <i data-lucide="lotus" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Terapia Tântrica</h3>
                     <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
-                        Um caminho de expansão da consciência corporal e despertar energético através do toque sagrado e consciente.
+                        Um caminho de expansão da consciência corporal e despertar energético através do toque terapêutico e consciente.
                     </p>
                 </div>
 
-                <!-- Terapia Sensorial -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
-                        <i data-lucide="feather" class="w-8 h-8"></i>
+                <!-- Terapia Somática -->
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                        <i data-lucide="shapes" class="w-8 h-8"></i>
                     </div>
-                    <h3 class="text-2xl font-serif mb-4">Terapia Sensorial</h3>
+                    <h3 class="text-2xl font-serif mb-4">Terapia Somática</h3>
                     <p class="text-text-muted text-sm leading-relaxed mb-6 font-light">
-                        Exploração profunda dos sentidos para reduzir o stress, promover o relaxamento e reconectar com o prazer de sentir.
+                        Exploração do sistema nervoso e consciência corporal para reduzir o sistema de alerta, promovendo o equilíbrio e a autorregulação emocional.
                     </p>
                 </div>
 
                 <!-- Desenvolvimento Pessoal -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
                         <i data-lucide="user" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Desenvolvimento Pessoal</h3>
@@ -252,8 +252,8 @@
                 </div>
 
                 <!-- Para Casais -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
                         <i data-lucide="heart" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Terapias para Casais</h3>
@@ -263,8 +263,8 @@
                 </div>
 
                 <!-- Relaxamento -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="400">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="400">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
                         <i data-lucide="sun" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Relaxamento Terapêutico</h3>
@@ -274,8 +274,8 @@
                 </div>
 
                 <!-- Conexão Emocional -->
-                <div class="p-10 glass hover:bg-white/5 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="500">
-                    <div class="mb-6 text-accent-red group-hover:scale-110 transition-transform bg-accent-red/10 w-16 h-16 flex items-center justify-center rounded-2xl">
+                <div class="p-10 glass hover:bg-gold-primary/10 transition-all duration-500 group" data-aos="fade-up" data-aos-delay="500">
+                    <div class="mb-6 text-gold-accent group-hover:scale-110 transition-transform bg-gold-primary/10 w-16 h-16 flex items-center justify-center rounded-2xl">
                         <i data-lucide="waves" class="w-8 h-8"></i>
                     </div>
                     <h3 class="text-2xl font-serif mb-4">Conexão Emocional</h3>
@@ -348,12 +348,12 @@
 
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Testemunho 1 -->
-                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up">
+                <div class="p-8 glass hover:bg-gold-primary/5 transition-all relative group" data-aos="fade-up">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLJO4IqIIp2nfOlKIxZiCrsnC6-WlwbmDTIDhPrYQJeSW2jDg=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <img src="https://lh3.googleusercontent.com/a/ACg8ocLJO4IqIIp2nfOlKIxZiCrsnC6-WlwbmDTIDhPrYQJeSW2jDg=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-gold-primary/20">
                         <div>
                             <p class="font-serif text-lg">Davi Santana</p>
-                            <div class="flex text-accent-red">
+                            <div class="flex text-gold-accent">
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
@@ -362,19 +362,19 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-gold-accent pl-4">
                         "O espaço é impecável. Pensado nos mínimos detalhes, transmuta-se num santuário de paz assim que atravessamos a porta..."
                     </p>
                     <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
                 </div>
 
                 <!-- Testemunho 2 -->
-                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up" data-aos-delay="100">
+                <div class="p-8 glass hover:bg-gold-primary/5 transition-all relative group" data-aos="fade-up" data-aos-delay="100">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXrwElxNeCXbG7QEj8V6PrP_92nrRGVVNk97VObOscGlDiBue_uOQ=w32-h32-p-rp-mo-ba3-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXrwElxNeCXbG7QEj8V6PrP_92nrRGVVNk97VObOscGlDiBue_uOQ=w32-h32-p-rp-mo-ba3-br100" class="w-12 h-12 rounded-full border border-gold-primary/20">
                         <div>
                             <p class="font-serif text-lg leading-tight">Roberto Cássio</p>
-                            <div class="flex text-accent-red">
+                            <div class="flex text-gold-accent">
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
@@ -383,19 +383,19 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-gold-accent pl-4">
                         "Muito bom! O processo terapêutico oferecido permite um aprofundamento em si mesmo..."
                     </p>
                     <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
                 </div>
 
                 <!-- Testemunho 3 -->
-                <div class="p-8 glass hover:bg-white/5 transition-all relative group" data-aos="fade-up" data-aos-delay="200">
+                <div class="p-8 glass hover:bg-gold-primary/5 transition-all relative group" data-aos="fade-up" data-aos-delay="200">
                     <div class="flex items-center gap-4 mb-6">
-                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXVNUeeOPFzPF5U854H-eogS9OoDmlCP2K5xvAEzT47_YpLslM=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-white/10">
+                        <img src="https://lh3.googleusercontent.com/a-/ALV-UjXVNUeeOPFzPF5U854H-eogS9OoDmlCP2K5xvAEzT47_YpLslM=w32-h32-p-rp-mo-br100" class="w-12 h-12 rounded-full border border-gold-primary/20">
                         <div>
                             <p class="font-serif text-lg">Ken Brandsø</p>
-                            <div class="flex text-accent-red">
+                            <div class="flex text-gold-accent">
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
                                 <i data-lucide="star" class="w-3 h-3 fill-current"></i>
@@ -404,7 +404,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-accent-red pl-4">
+                    <p class="text-text-muted italic leading-relaxed font-light text-sm border-l-2 border-gold-accent pl-4">
                         "Tive uma sessão inicial e achei-a muito impactante e encorajadora..."
                     </p>
                     <i data-lucide="quote" class="absolute top-8 right-8 w-12 h-12 text-white opacity-[0.03]"></i>
@@ -422,18 +422,18 @@
                     <h2 class="text-4xl md:text-5xl font-serif mb-12">Onde nos Encontrar</h2>
                     <div class="space-y-10">
                         <div class="flex items-start gap-6">
-                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-gold-accent">
                                 <i data-lucide="map-pin"></i>
                             </div>
                             <div>
                                 <p class="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Morada</p>
                                 <p class="text-lg font-serif">R. Oliveira Martins 29A</p>
                                 <p class="text-text-muted font-light">1000-211 Lisboa, Portugal</p>
-                                <p class="text-[10px] uppercase tracking-widest mt-2 text-accent-red font-bold">Estacionamento pago na rua</p>
+                                <p class="text-[10px] uppercase tracking-widest mt-2 text-gold-accent font-bold">Estacionamento pago na rua</p>
                             </div>
                         </div>
                         <div class="flex items-start gap-6">
-                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-gold-accent">
                                 <i data-lucide="clock"></i>
                             </div>
                             <div>
@@ -451,17 +451,17 @@
                             </div>
                         </div>
                         <div class="flex items-start gap-6">
-                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-accent-red">
+                            <div class="bg-white/5 w-12 h-12 flex items-center justify-center rounded-full text-gold-accent">
                                 <i data-lucide="phone"></i>
                             </div>
                             <div>
                                 <p class="text-xs uppercase tracking-widest font-bold opacity-50 mb-2">Contacto Direto</p>
-                                <p class="text-xl font-serif mb-1">+351 935 009 752</p>
+                                <p class="text-xl font-serif mb-1 text-gold-accent">+351 935 009 752</p>
                                 <div class="flex gap-4 mt-2">
-                                    <a href="https://www.instagram.com/tantrasarah_lisboa/" target="_blank" class="text-white/40 hover:text-white transition-colors">
+                                    <a href="https://www.instagram.com/tantrasarah_lisboa/" target="_blank" class="text-white/40 hover:text-gold-accent transition-colors">
                                         <i data-lucide="instagram" class="w-5 h-5"></i>
                                     </a>
-                                    <a href="https://wa.me/351935009752" target="_blank" class="text-white/40 hover:text-white transition-colors">
+                                    <a href="https://wa.me/351935009752" target="_blank" class="text-white/40 hover:text-gold-accent transition-colors">
                                         <i data-lucide="message-square" class="w-5 h-5"></i>
                                     </a>
                                 </div>
